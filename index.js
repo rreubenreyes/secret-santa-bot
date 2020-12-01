@@ -8,19 +8,8 @@ const logger = Bunyan.createLogger({
     level: 'debug'
 });
 
-function getDiscordClient() {
-    const discord = new Discord.Client();
-
-    discord.login(TOKEN);
-
-    return new Promise((resolve) => {
-        discord.on('ready', () => {
-            logger.info('Logged in');
-
-            resolve(discord);
-        });
-    });
-}
+async function updateUser() {}
+async function getRemainingUsers() {}
 
 exports.handler = async () => {
     const discord = new Discord.Client();
